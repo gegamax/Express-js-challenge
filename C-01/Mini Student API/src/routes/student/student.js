@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 
 let students = [
-  { id: 1, name: "Kamal", age: 20 },
-  { id: 1, name: "Kamal", age: 20 },
-  { id: 2, name: "Nimal", age: 22 }
+  { id: 1, name: "cj", age: 20 },
+  { id: 1, name: "jone", age: 20 },
+  { id: 2, name: "smith", age: 22 }
 ];
 
 router.get('/', (req, res) => {
@@ -18,10 +18,6 @@ router.get('/:id', (req, res) => {
     return res.status(404).json({ message: "Student not found"});
   }
   res.status(200).json(student);
-})
-router.post('/', (req, res)=> {
-    console.log(req)
-    res.status(200).json(students)
 })
 
 module.exports = router;
